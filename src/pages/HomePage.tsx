@@ -6,7 +6,6 @@ import {
   Laptop,
   Coffee,
   PenTool,
-  ArrowRight,
   Star,
   TrendingUp,
   Users,
@@ -16,6 +15,7 @@ import {
   MapPin
 } from 'lucide-react';
 import Process from './Process';
+import CampusCartelHero from './Hero';
 
 const HomePage: React.FC = () => {
   const categories = [
@@ -114,63 +114,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold mb-6"
-            >
-              Your Campus
-              <motion.span
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"
-              >
-                Marketplace
-              </motion.span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-xl md:text-2xl mb-8 text-gray-200"
-            >
-              Buy, sell, and donate student essentials with your campus community
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <Link to="/products">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow flex items-center gap-2"
-                >
-                  Start Shopping
-                  <ArrowRight size={20} />
-                </motion.button>
-              </Link>
-              <Link to="/auth">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  Join Community
-                </motion.button>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <CampusCartelHero />
 
       {/* Categories Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
